@@ -1,0 +1,65 @@
+/* Estilos para UD1 ACT1 Ejercicio 2 */
+
+/*=============== TIPOGRAFIA ==================*/
+
+@font-face {
+    font-family: Montserrat;
+    src: url(font/Montserrat-Regular.otf), url(font/Montserrat-Regular.ttf), url(font/Montserrat-Regular.eot);
+}
+
+
+body, input, textarea,select {
+    font-family: Montserrat;
+}
+
+body{
+    margin:0 auto;
+}
+
+
+
+
+
+/*=============== FORMULARIO ==================*/
+
+#formulario {
+    font-size: 1em;
+    padding: 2em;
+}
+
+.lineaformulario {
+    display:flex;
+}
+
+.lineaformulario {
+    width: 100%;
+    padding-bottom: .5em;
+    padding-top: 1em;
+}
+
+label{
+    flex-basis: 10%;
+    text-align: left;
+    padding-right: 1em;
+}
+
+.contenido {
+    flex-basis:90%;
+    text-align: left;
+}
+
+.asterisco {
+    color: red;
+    font-size: 1em;
+    padding-top: .5em; 
+
+}
+
+input:focus, textarea:focus { 
+   border: 5px solid green;
+   background-color: #f4eaf4;
+}
+
+textarea{
+    padding:.5em;    
+}

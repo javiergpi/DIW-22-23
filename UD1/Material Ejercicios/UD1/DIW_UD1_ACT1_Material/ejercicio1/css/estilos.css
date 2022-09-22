@@ -1,0 +1,18 @@
+/* Estilos para UD1 ACT1 Ejercicio 1 */
+
+
+#formulario-contacto div{
+    display:flex;
+   
+}
+
+#formulario-contacto div label{
+    flex-basis:10%;
+}
+
+table{
+    border:1px solid black;
+}
+
+
+

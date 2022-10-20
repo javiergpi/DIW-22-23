@@ -1,0 +1,30 @@
+
+@font-face {
+    font-family: Roboto;
+    src: url("font/Roboto-Regular.ttf");
+}
+
+body{
+    background: linear-gradient(45deg, #000055,#000066);
+}
+
+#contenedor{
+    width:80%;
+    height:100vh;
+    margin:0 auto;
+    
+    padding:1em;
+  
+    img{
+        border-radius:50%;
+        border:5px solid #6c6c6c;
+        &:hover{
+            transform:scale(1.05);
+        }
+    }
+ }
+
+
+
+     
+

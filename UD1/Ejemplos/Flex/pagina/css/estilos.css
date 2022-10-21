@@ -1,0 +1,43 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+
+header, nav, article, aside, footer {
+  padding: 1em;
+}
+
+header {
+  background-color: #e0e0e0;
+}
+
+nav {
+  background-color: #6ab5ff;
+}
+nav ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+nav ul li {
+  background-color: rgba(146, 158, 211, 0.6862745098);
+}
+
+.articulo1 {
+  background-color: rgba(255, 217, 0, 0.568);
+}
+
+.articulo2 .imagenes img {
+  width: 100%;
+  height: 100%;
+}
+.contenido div {
+  background-color: #dddd00;
+}
+
+aside {
+  background-color: #e0e0e0;
+}
+
+footer {
+  background-color: rgba(137, 43, 226, 0.658);
+}

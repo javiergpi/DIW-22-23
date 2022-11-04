@@ -1,0 +1,37 @@
+@font-face {
+  font-family: Roboto;
+  src: url("font/Roboto-Regular.ttf");
+}
+#contenedor {
+  width: 80%;
+  margin: 0 auto;
+  background-color: rgba(255, 0, 0, 0.1);
+  padding: 1em;
+  height: 100vh; /*100% de la altura del viewport (area visible)*/
+}
+
+header {
+  font-size: 2em;
+  padding: 1em;
+  background-color: rgba(255, 0, 0, 0.6);
+  color: white;
+}
+
+main {
+  padding: 1em;
+  height: 80%; /* 80% del padre (#contenedor) */
+}
+main .interna {
+  font-weight: bold;
+  padding: 1em;
+}
+main .verde {
+  color: rgba(0, 255, 0, 0.8);
+  border: 1px solid rgba(0, 255, 0, 0.8);
+  background-color: rgba(0, 255, 0, 0.2);
+}
+main .azul {
+  background-color: rgba(0, 0, 255, 0.2);
+  color: rgba(0, 0, 255, 0.7);
+  border: 1px solid rgba(0, 0, 255, 0.7);
+}

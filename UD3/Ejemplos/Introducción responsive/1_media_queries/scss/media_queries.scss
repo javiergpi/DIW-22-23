@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.8em;
+}
+
+#contenedor {
+    padding:0 1em;
+    display:grid;
+    gap:1em;
+   
+    p {
+        background-color: cadetblue;
+        padding: 1em;
+      
+    }
+}
+

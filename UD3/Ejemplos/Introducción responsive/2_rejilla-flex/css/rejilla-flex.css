@@ -1,0 +1,71 @@
+/* REJILLA FLEX 
+* Rejilla de 12 columnas.
+ *  Cada elemento a maquetar en columnas debe ser .contenedor
+ * Los elementos .col-XX ocupan XX columnas.
+*/
+* {
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+[class*=col-] {
+  background-color: darkkhaki;
+  padding: 1em; /* Simulamos el gap mediante padding y borde del color de fondo */
+  border: 1em solid white;
+}
+
+/* Rejilla de 12 columnas en todas las resoluciones */
+.col-12 {
+  flex-basis: 99.96%;
+}
+
+.col-11 {
+  flex-basis: 91.63%;
+}
+
+.col-10 {
+  flex-basis: 83.3%;
+}
+
+.col-9 {
+  flex-basis: 74.97%;
+}
+
+.col-8 {
+  flex-basis: 66.64%;
+}
+
+.col-7 {
+  flex-basis: 58.31%;
+}
+
+.col-6 {
+  flex-basis: 49.98%;
+}
+
+.col-5 {
+  flex-basis: 41.65%;
+}
+
+.col-4 {
+  flex-basis: 33.32%;
+}
+
+.col-3 {
+  flex-basis: 24.99%;
+}
+
+.col-2 {
+  flex-basis: 16.66%;
+}
+
+.col-1 {
+  flex-basis: 8.33%;
+}

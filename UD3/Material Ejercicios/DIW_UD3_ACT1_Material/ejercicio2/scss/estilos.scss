@@ -1,0 +1,22 @@
+@import "rejilla-responsive-sass";
+
+
+* {
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+
+@include breakpoint(nth(map-get($breakpoints,"md"),1),nth(map-get($breakpoints,"md"),2)){
+    /* Ejemplo de uso media query para resoluciones MD */
+  } 
+
+ @include breakpoint(nth(map-get($breakpoints,"lg"),1),nth(map-get($breakpoints,"lg"),2)){
+   /* Ejemplo de uso media query para resoluciones LG */
+ } 
+
+ @include breakpoint(nth(map-get($breakpoints,"xl"),1),nth(map-get($breakpoints,"xl"),2)){
+    /* Ejemplo de uso media query para resoluciones XL */
+  }   

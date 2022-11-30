@@ -1,0 +1,28 @@
+aside{
+   
+    article{
+        background-color: $color-letra;
+
+        h2{
+            font-size: $tam-base*1.5;
+            font-weight: 500;
+            
+        }
+        h2, p{
+            color:black;
+            padding:$tam-base;
+        }
+        img{
+            width:100%;
+        }
+    }
+    .banner{
+        img{
+            width: 100%;
+            height:100%;
+        }
+    }
+
+    
+   
+}

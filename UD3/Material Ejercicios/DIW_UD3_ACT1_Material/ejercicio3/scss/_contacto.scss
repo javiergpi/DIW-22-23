@@ -1,0 +1,22 @@
+@use "sass:math";
+
+section#contacto{
+    background-color:$color-fondo-cabecera;
+    padding:$tam-base; 
+    h1{ 
+        font-size:$tam-base*2;
+        padding:math.div($tam-base,2);
+        text-align:center; 
+    }
+    input, textarea{
+        color:black;
+        padding:math.div($tam-base,3);
+        font-family: $tipografia;
+        font-weight:400 ;
+    }
+
+    textarea{
+        resize:none;
+    }
+    
+}

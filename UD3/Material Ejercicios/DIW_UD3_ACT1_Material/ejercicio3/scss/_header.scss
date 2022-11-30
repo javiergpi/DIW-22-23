@@ -1,0 +1,54 @@
+@use "sass:math";
+
+
+header{
+    background-color: $color-fondo-cabecera;
+    padding:$tam-base;
+
+    
+    #titulo{
+      
+        h1{
+            font-size:$tam-base*3;
+            letter-spacing: -1px;
+            span{
+                color:$color-bolsos;
+               
+            }
+        }
+        p{
+            color:$color-secundario;
+            font-size:$tam-base*1.5;
+        }
+    }
+
+    nav{
+       
+
+        ul{
+         
+          gap:$tam-base;
+            li{
+                font-size:$tam-base*1.5;
+              
+                text-align:center;
+                &#activo{
+                    font-weight: bold;
+                }
+               
+            }
+          
+        }
+
+        #social{
+           
+            i{
+            font-size:$tam-base*2;
+            color:$color-secundario;
+          
+            }
+        }
+    }
+}
+
+

@@ -1,0 +1,67 @@
+
+
+$columnas:12;
+$espacio-filas:$tam-base;
+$espacio-columnas:$tam-base;
+
+$breakpoints:(
+    "sm":(false,768px),
+    "md":(768px,1024px),
+    "xl":(1024px,false) 
+);
+
+.contenedor{
+    display: grid;
+    grid-template-columns: repeat($columnas,1fr);
+    row-gap:$espacio-filas;
+    column-gap:$espacio-columnas;
+}
+
+@mixin breakpoint($min,$max){
+     
+    @if($min==false){
+        @media screen and (max-width:$max) {
+                @content;
+        }
+    }
+
+    @else if($max==false){
+        @media screen and (min-width:$min) {
+            @content;
+        }
+       }
+
+      @else{
+        @media screen and (min-width:$min) and (max-width:$max){
+            @content;
+        }
+       }
+    }
+
+ 
+
+
+@each $nombre,$res in $breakpoints{
+    $min:nth($res,1);
+    $max:nth($res,2);
+
+    @include breakpoint($min,$max){
+        @for $i from 1 through $columnas {
+            .col-#{$nombre}-#{$i}{grid-column-end: span $i};
+            @if($i != $columnas){
+                .margin-#{$nombre}-#{$i}{grid-column-start: $i + 1};
+            }
+        }
+    .hidden-#{$nombre}{ display:none !important;}
+    }
+}
+
+
+
+// Ejemplo de aplicación de breakpoint 
+
+// @include breakpoint(nth(map-get($breakpoints,"md"),1),nth(map-get($breakpoints,"md"),2)){
+//     #titulo{
+//         justify-content: center;
+//   } 
+// }

@@ -1,0 +1,94 @@
+@import "rejilla";
+
+* {
+    box-sizing: border-box;
+    font-family: "Lucida Sans", sans-serif;
+}
+
+h1{
+	font-size:3em;
+}
+
+header {
+    background-color: #9933cc;
+    color: #ffffff;
+    padding: 15px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color :#33b5e5;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+nav li:hover {
+    background-color: #0099cc;
+}
+
+aside {
+    background-color: #33b5e5;
+    padding: 15px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+footer{
+    background-color: #0099cc;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+}
+
+
+/* Estilos relativos al menú responsive */
+
+    #hamburguesa{
+        background-color:#0099cc;
+    }
+
+    #menu-responsive li:not(:first-child){
+        display:none;
+    }
+
+  
+    
+   
+
+    @include breakpoint(nth(map-get($breakpoints,"sm"),1),nth(map-get($breakpoints,"sm"),2)){
+        .responsive li{
+            display:block !important;    
+          }
+      } 
+
+      @include breakpoint(nth(map-get($breakpoints,"md"),1),nth(map-get($breakpoints,"md"),2)){
+        #hamburguesa{
+            display:none;
+            visibility: hidden;
+        }
+
+        #menu-responsive li:not(:first-child){
+            display:block !important;
+        }
+      } 
+
+      @include breakpoint(nth(map-get($breakpoints,"lg"),1),nth(map-get($breakpoints,"lg"),2)){
+        #hamburguesa{
+            display:none;
+            visibility: hidden;
+        }
+
+        #menu-responsive li:not(:first-child){
+            display:block !important;
+        }
+      } 
+

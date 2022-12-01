@@ -1,0 +1,88 @@
+/* Rejilla responsive: 
+*     -1 columna en resoluciones pequeñas
+*      - 3 puntos de ruptura para resoluciones medianas (md), grandes (lg) y muy grandes (xl)
+*      - Todas ellas con 12 columnas
+*  Cada elemento a maquetar en columnas debe ser .contenedor
+* Los elementos .res-col-XX ocupan XX columnas.
+* Incluye clases .margin-XX para indicar el margen izquierdo
+*/
+
+
+$columnas:12;
+$espacio-filas:1em;
+$espacio-columnas:1em;
+
+$breakpoints:(
+    "sm":(false,759px),
+    "md":(760px,1199px),
+    "lg":(1200px,false) 
+);
+
+*{
+    box-sizing:border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+
+
+.contenedor{
+    display: grid;
+    padding:$espacio-filas;
+    grid-template-columns: repeat($columnas,1fr);
+    row-gap:$espacio-filas;
+    column-gap:$espacio-columnas;
+}
+
+
+
+@mixin breakpoint($min,$max){
+     
+    @if($min==false){
+        @media screen and (max-width:$max) {
+                @content;
+        }
+    }
+
+    @else if($max==false){
+        @media screen and (min-width:$min) {
+            @content;
+        }
+       }
+
+      @else{
+        @media screen and (min-width:$min) and (max-width:$max){
+            @content;
+        }
+       }
+    }
+
+ 
+
+
+@each $nombre,$res in $breakpoints{
+    $min:nth($res,1);
+    $max:nth($res,2);
+
+    @include breakpoint($min,$max){
+        @for $i from 1 through $columnas {
+            .col-#{$nombre}-#{$i}{grid-column-end: span $i};
+            @if($i != $columnas){
+                .margin-#{$nombre}-#{$i}{grid-column-start: $i + 1};
+            }
+        }
+    .hidden-#{$nombre}{ display:none;}
+    }
+}
+
+@include breakpoint(nth(map-get($breakpoints,"sm"),1),nth(map-get($breakpoints,"sm"),2)){
+    /* Ejemplo de uso media query para resoluciones SMALL */
+  } 
+
+ @include breakpoint(nth(map-get($breakpoints,"md"),1),nth(map-get($breakpoints,"md"),2)){
+   /* Ejemplo de uso media query para resoluciones MEDIUM */
+ } 
+
+ @include breakpoint(nth(map-get($breakpoints,"lg"),1),nth(map-get($breakpoints,"lg"),2)){
+    /* Ejemplo de uso media query para resoluciones LARGE */
+  }   

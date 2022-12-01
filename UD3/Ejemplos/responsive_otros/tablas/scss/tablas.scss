@@ -1,0 +1,20 @@
+
+
+@media screen and (max-width:768px){
+ tr td:first-child{
+     background-color:grey;
+ }
+
+ table, thead, tbody, th, td, tr {
+    display: block;
+}
+
+ tbody td:before{
+     content:attr(data-th);
+ }
+
+ thead{
+     display:none;
+ }
+    
+}

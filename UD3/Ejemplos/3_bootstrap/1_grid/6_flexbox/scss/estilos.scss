@@ -1,0 +1,12 @@
+@import url("../../../node_modules/bootstrap-icons/font/bootstrap-icons.css");
+
+.contenedor {
+    padding:1em;
+    background: #0d6efd;
+    color: #fff;
+        div {
+            background: rgba(255,255,255, .2);
+            padding: 1em;
+            border: 1px solid #0d6efd;
+        }
+}

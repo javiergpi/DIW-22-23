@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <title>BS Grid-FlexBox Ejemplo 2</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="row my-5">
+			<div class="col">
+				<h4>Fill</h4>
+				<hr>
+
+				<!-- 
+					.flex-fill
+
+					sm | md | lg | xl | xxl
+					.flex-*-fill
+				-->
+
+				<div class="contenedor d-flex align-items-start">
+					<div>Lorem ipsum dolor sit amet.</div>
+					<div class="flex-fill">.flex-fill</div>
+					<div class="flex-fill">.flex-fill</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row my-5">
+			<div class="col">
+				<h4>Align Items</h4>
+				<hr>
+
+				<!-- Variantes:
+					.align-items-start
+					.align-items-end
+					.align-items-center
+					.align-items-baseline
+					.align-items-stretch
+
+					sm | md | lg | xl | xxl
+					.align-items-*-start
+					.align-items-*-end
+					.align-items-*-center
+					.align-items-*-baseline
+					.align-items-*-stretch
+				-->
+
+				<p>.align-items-start</p>
+				<div class="contenedor d-flex align-items-start">
+					<div>Caja 1</div>
+					<div>Caja 2</div>
+					<div>Caja 3</div>
+				</div>
+
+				<p>.align-items-center</p>
+				<div class="contenedor d-flex align-items-center">
+					<div>Caja 1</div>
+					<div>Caja 2</div>
+					<div>Caja 3</div>
+				</div>
+
+				<p>.align-items-end</p>
+				<div class="contenedor d-flex align-items-end">
+					<div>Caja 1</div>
+					<div>Caja 2</div>
+					<div>Caja 3</div>
+				</div>
+
+				<p>.align-items-baseline</p>
+				<div class="contenedor d-flex align-items-baseline">
+					<div>Caja 1</div>
+					<div>Caja 2</div>
+					<div>Caja 3</div>
+				</div>
+
+				<p>.align-items-strech</p>
+				<div class="contenedor d-flex align-items-strech">
+					<div>Caja 1</div>
+					<div>Caja 2</div>
+					<div>Caja 3</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row my-5">
+			<div class="col">
+				<h4>Align Self</h4>
+				<hr>
+
+				<!-- Variantes:
+					.align-self-start
+					.align-self-end
+					.align-self-center
+					.align-self-baseline
+					.align-self-stretch
+
+					sm | md | lg | xl | xxl
+					.align-self-*-start
+					.align-self-*-end
+					.align-self-*-center
+					.align-self-*-baseline
+					.align-self-*-stretch
+				-->
+	
+				<div class="contenedor d-flex">
+					<div class="align-self-start">.align-self-start</div>
+					<div class="align-self-center">.align-self-center</div>
+					<div class="align-self-end">.align-self-end</div>
+					<div class="align-self-baseline">.align-self-baseline</div>
+					<div class="align-self-stretch">.align-self-stretch</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+
+</html>

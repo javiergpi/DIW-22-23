@@ -1,0 +1,19 @@
+@import url("../../../node_modules/bootstrap-icons/font/bootstrap-icons.css");
+
+
+.container {
+    padding: 1em;
+  
+    .row {
+      background: #e8e8e8;
+  
+      height: 150px;
+      div {
+        background: #f2f2f2;
+        text-align: center;
+        padding: 1em;
+        border: 1px solid #4d5061;
+      }
+    }
+  }
+  

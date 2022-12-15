@@ -1,0 +1,23 @@
+
+#cabecera{
+    background-color:$color-fondo1;
+    .logo{
+        font-size:2*$tam-base;
+        color:$color-titulo;
+    }
+
+    nav{
+        ul{
+            li{
+                a{
+                color:$color-letra1;
+                font-size:1.5*$tam-base;
+                &:hover{
+                    color:$color-botones;
+                    transition: color 1s;
+                }
+                } 
+            }
+        }
+    }
+} 

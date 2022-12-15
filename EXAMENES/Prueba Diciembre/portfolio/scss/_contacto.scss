@@ -1,0 +1,29 @@
+@use "sass:math";
+
+#contacto{
+    text-align: center;
+    h3{
+        font-size:2*$tam-base;
+    }
+
+    button{
+        background-color: $color-botones;
+        color:$color-letra1; 
+    }
+
+    #formulario-contacto{
+        background-color:$color-fondo-portfolio;
+        font-family:$tipografia !important;
+ 
+        textarea{
+            resize: none;
+            font-family:$tipografia !important;
+            padding:math.div($tam-base,2);
+        }
+
+        input{
+            font-family:$tipografia !important;
+            padding:math.div($tam-base,2);
+        }
+    }
+}
